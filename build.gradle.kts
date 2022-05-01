@@ -37,6 +37,10 @@ dependencies {
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("com.squareup.okhttp:mockwebserver:2.7.5")
+	testImplementation(group = "com.nhaarman", name = "mockito-kotlin", version = "1.6.0")
+	testImplementation(group = "io.mockk", name = "mockk", version = "1.11.0")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
 }
 
 tasks.withType<KotlinCompile> {
