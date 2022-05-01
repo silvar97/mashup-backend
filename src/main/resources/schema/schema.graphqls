@@ -1,0 +1,90 @@
+schema {
+    query: Query
+    subscription: Subscription
+}
+
+type Subscription {
+    getAssetsSubscription(currency:Currency!):[Asset]
+    getTotalsSubscription(currency:Currency!):Total
+    getHistoricalDataForWavesSubscription(currency:Currency!):HistoricalData
+    getHistoricalDataForBTCSubscription(currency:Currency!):HistoricalData
+    getHistoricalDataForETHSubscription(currency:Currency!):HistoricalData
+         getNewsForWavesSubscription:[News]
+            getNewsForBtcSubscription:[News]
+            getNewsForEthSubscription:[News]
+
+}
+
+type Query {
+    getAssets(currency:Currency!):[Asset]
+     getTotals(currency:Currency!):Total
+     getHistoricalDataForWaves(currency:Currency!):HistoricalData
+      getHistoricalDataForBTC(currency:Currency!):HistoricalData
+       getHistoricalDataForETH(currency:Currency!):HistoricalData
+       getNewsForWaves:[News]
+        getNewsForBtc:[News]
+        getNewsForEth:[News]
+
+ }
+
+type Asset{
+    id:String
+    name:String
+    shortCode:String
+    totalSupply:String
+    trades:String
+    price:String
+    change:String
+    volume:String
+
+}
+type Total{
+    totalCap:String
+    gateways:String
+    assets:String
+    vol24H:String
+    trades24H:String
+}
+type HistoricalData{
+    name:String
+    lastRefreshed:String
+    priceData:[PriceData]
+}
+
+type PriceData{
+       date:String
+       price:String
+       volume:String
+}
+type News{
+       name:String
+       title:String
+       description:String
+       time:String,
+       sentiment:Sentiment
+}
+enum Currency{
+    EURO,
+    USD,
+    ETH,
+    BTC
+}
+enum Sentiment{
+GOOD,
+BAD,
+NEUTRAL
+}
+
+
+
+#priceUSD:Float
+#changeUSD:Float
+#volumeUSD:Int
+#
+#priceBTC:Float
+#changeBTC:Float
+#volumeBTC:Int
+#
+#priceETH:Float
+#changeETH:Float
+#volumeETH:Int

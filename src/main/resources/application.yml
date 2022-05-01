@@ -1,0 +1,25 @@
+#########################################
+# settings for webclient
+#########################################
+webclient:
+  baseUrlWavescape: ${WEBCLIENT_BASE_URL_WAVESCAPE}
+  baseUrlBlockchair: ${WEBCLIENT_BASE_URL_BLOCKCHAIR}
+  baseUrlAlphavantage: ${WEBCLIENT_BASE_URL_ALPHAVANTAGE}
+  baseUrlMeaningcloud: ${WEBCLIENT_BASE_URL_MEANINGCLOUD}
+
+#########################################
+# settings for blockchair
+#########################################
+blockChair:
+  apiKey: ${BLOCKCHAIR_API_KEY}
+
+#########################################
+# settings for aplhavantage
+#########################################
+alphavantage:
+  apiKey: ${ALPHAVANTAGE_API_KEY}
+#########################################
+# settings for aplhavantage
+#########################################
+meaningcloud:
+  apiKey: ${MEANINGCLOUD_API_KEY}
